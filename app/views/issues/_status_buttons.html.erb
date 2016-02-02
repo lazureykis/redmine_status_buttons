@@ -1,5 +1,5 @@
 <% if @issue.editable? && @issue.safe_attribute?('status_id') && @allowed_statuses.present? && cb_new_statuses.present? %>
-  <%= javascript_include_tag "status_buttons", plugin: 'status_buttons' %>
+  <%= javascript_include_tag "status_buttons", plugin: 'redmine_status_buttons' %>
   <span id='status_buttons_container' style='display:none;'>
     <% cb_new_statuses.each do |status| %>
       <span> <%= link_to status.name, edit_issue_path(@issue), :onclick => "sbSetStatus(#{status.id}); return false;", :class => 'icon icon-checked' %> </span>
