@@ -9,4 +9,3 @@ Redmine::Plugin.register :redmine_status_buttons do
   author_url 'https://github.com/lazureykis'
 end
 
-IssuesHelper.prepend StatusButtons::IssuesHelperPatch

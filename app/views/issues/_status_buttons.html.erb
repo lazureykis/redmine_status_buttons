@@ -1,3 +1,4 @@
+<% cb_new_statuses = @allowed_statuses - [@issue.status] %>
 <% if @issue.editable? && @issue.safe_attribute?('status_id') && @allowed_statuses.present? && cb_new_statuses.present? %>
   <%= javascript_include_tag "status_buttons", plugin: 'redmine_status_buttons' %>
   <span id='status_buttons_container' style='display:none;'>
